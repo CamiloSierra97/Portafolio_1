@@ -1,15 +1,16 @@
 :root {
-    --header_text: 18px;
-    --bs_home: 25px;
-    --image_size: 20px;
-    --bs_home: 250px;
+    --font__size: 10px;
+    --header__text: 18px;
+    --bs__home: 25px;
+    --image__size: 20px;
+    --bs__home: 250px;
     --text: 9px;
     --bar__progress: 70%;
     --test: 100px;
 }
 
 html {
-    font-size: 10px;
+    font-size: --font__size;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
     background-color: #112B3C;
@@ -21,7 +22,7 @@ html {
 
 body {
     position: absolute;
-    margin: 0px;
+    margin: 0px 30px 0px;
 }
 
 *,
@@ -212,7 +213,10 @@ body {
 }
 
 .main_ul {
+    display: grid;
     list-style: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
 }
 
 .bxl-linkedin {
@@ -322,7 +326,7 @@ body {
 aside {
     margin-top: 40px;
     max-width: 360px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .aside_container {
@@ -334,14 +338,15 @@ aside {
 .title {
     text-align: center;
     margin-top: 130px;
+    padding-right: 20px;
 }
 
 .aside_ul {
-    display: grid;
+    display: flex;
     list-style: none;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     margin-top: 30px;
+    justify-content: space-between;
 }
 
 .contact {
@@ -353,6 +358,20 @@ aside {
 
 .contact a {
     text-decoration: none;
+    font-style: normal;
+    color: #EFEFEF;
+}
+
+.contact a:hover {
+    transform: rotate3d(360deg);
+    -ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
 }
 
 .footer_text {
