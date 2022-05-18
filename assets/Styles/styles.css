@@ -15,6 +15,7 @@ html {
     background-color: #112B3C;
     color: #EFEFEF;
     margin: 0px;
+    justify-content: center;
 }
 
 body {
