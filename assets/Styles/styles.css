@@ -473,10 +473,6 @@ footer {
         overflow: hidden;
     }
     
-    .progress_bar {
-        left: -124px;
-    }
-    
     .name {
         --name__size: 104px;
     }
