@@ -1,13 +1,21 @@
 :root {
     --font__size_: 10px;
     --max__width: 480px;
-    --article__width: 165px;
+    --article__width: 200px;
     --margin__section__2__container: 250px 30px 0px;
+    --main__span__size: 18px;
+    --name__size: 50px;
+    --text: 11px;
+    --social__left: 20px;
     --header__text: 18px;
+    --main__2__margin: 0px;
+    --social__btn__size: 15px;
+    --social__btn__size__2: 26px;
+    --left__section_container_2: 200px; 
+    --max__width: 767px;
     --bs__home: 25px;
     --image__size: 20px;
     --bs__home: 250px;
-    --text: 9px;
     --bar__progress: 70%;
     --test: 100px;
 }
@@ -157,7 +165,7 @@ body {
 
 .main_section-span {
     color: #EFEFEF;
-    font-size: --bs_home;
+    font-size: var(--main__span__size);
     margin-left: 0px;
 }
 
@@ -169,7 +177,7 @@ body {
 .name {
     padding-left: 10px;
     color: #3496cf;
-    font-size: 20px;
+    font-size: var(--name__size);
 }
 
 .article {
@@ -207,7 +215,7 @@ body {
     position: absolute;
     font-size: 38px;
     justify-content: end;
-    left: 200px;
+    left: var(--left__section_container_2);
 }
 
 .main_section_2 {
@@ -223,26 +231,27 @@ body {
     list-style: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    margin-top: 0px;
 }
 
 .bxl-linkedin {
     color: rgba(17, 43, 60, 0.8);
-    font-size: 15px;
+    font-size: var(--social__btn__size);
 }
 
 .bxl-instagram {
     color: rgba(17, 43, 60, 0.8);
-    font-size: 15px;
+    font-size: var(--social__btn__size);
 }
 
 .bxl-twitter {
     color: rgba(17, 43, 60, 0.8);
-    font-size: 15px;
+    font-size: var(--social__btn__size);
 }
 
 .social_btn {
-    height: 26px;
-    width: 26px;
+    height: var(--social__btn__size__2);
+    width: var(--social__btn__size__2);
     border-radius: 100%;
     border-style: hidden;
     background-color: rgba(239, 239, 239, 0.8);
@@ -258,9 +267,8 @@ body {
 }
 
 .skills_container {
-    overflow: hidden;
-    border-radius: 6px;
-    animation-delay: 5sg;
+    animation-delay: 5s;
+    justify-content: center;
 }
 
 .progress_bar {
@@ -283,9 +291,8 @@ body {
     z-index: 0;
     margin-bottom: 20px;
     position: absolute;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-
 
 .progress_70 {
     --bar__progress: 70%;
@@ -319,10 +326,12 @@ body {
     justify-content: center;
     gap: 50px;
     width: 100%;
+    margin-top: var(--main__2__margin);
 }
 
 .main_2_p {
     text-align: center;
+    margin: 0px 40px 0px;
 }
 
 
@@ -334,8 +343,7 @@ body {
 
 .main_article_2 {
     display: grid;
-    flex-direction: column;
-    gap: 30px;
+    position: relative;
 }
 
 
@@ -405,7 +413,7 @@ footer {
     text-align: center;
     margin: 280px 0px 0px 0px;
     background-color: #73777B;
-    max-width: 100vh;
+    max-width: var(--max__width);
 }
 
 ::-webkit-scrollbar {
@@ -430,9 +438,8 @@ footer {
         --font__size: 28px;
     }
 
-
     .section_2_container { 
-        max-width: var(--max__width);
+        --max__width: 1280px;
     }
 
     .article_container {
@@ -444,6 +451,72 @@ footer {
     }
 
     .main_2 {
-        display: grid;
+        --main__2__margin: 580px;
     }
+
+    .article_container {
+        --article__width: 400px;
+    }
+
+    .main_section-span {
+        --main__span__size: 54px;
+    }
+
+    .main_article_2 {
+        grid-template-rows: repeat(5, 1fr);
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .skill_bar {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .progress_bar {
+        left: -124px;
+    }
+    
+    .name {
+        --name__size: 104px;
+    }
+
+    .main_ul {
+        --social__left: 280;
+    }
+
+    .bxl-linkedin {
+        --social__btn__size: 40px;
+    }
+    
+    .bxl-instagram {
+        --social__btn__size: 40px;
+    }
+    
+    .bxl-twitter {
+        --social__btn__size: 30px;
+    }
+
+    .social_btn {
+        --social__btn__size__2: 50px;
+    }
+
+    .main_ul {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: none;
+    }
+
+    .section_container_2 {
+        --left__section_container_2: 600px;
+    }
+
+    footer {
+        --max__width: 1280px;
+    }
+
+    .skill_bar {
+        left: 55px;
+    }
+
 }
