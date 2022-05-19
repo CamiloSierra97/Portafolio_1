@@ -4,19 +4,24 @@
     --article__width: 200px;
     --margin__section__2__container: 250px 30px 0px;
     --main__span__size: 18px;
+    --span__weigth: 200;
     --name__size: 50px;
+    --name__weight: 400;
     --text: 11px;
     --social__left: 20px;
     --header__text: 18px;
     --main__2__margin: 0px;
     --social__btn__size: 15px;
     --social__btn__size__2: 26px;
-    --left__section_container_2: 200px; 
+    --left__section_container_2: 200px;
     --max__width: 767px;
     --bs__home: 25px;
     --image__size: 20px;
     --bs__home: 250px;
     --bar__progress: 70%;
+    --contact__width: 40px;
+    --contact__size: 50px;
+    --contact__i__size: 50px;
     --test: 100px;
 }
 
@@ -166,7 +171,9 @@ body {
 .main_section-span {
     color: #EFEFEF;
     font-size: var(--main__span__size);
+    font-weight: var(--span__weigth);
     margin-left: 0px;
+    font-style: italic;
 }
 
 .main_text {
@@ -178,6 +185,8 @@ body {
     padding-left: 10px;
     color: #3496cf;
     font-size: var(--name__size);
+    font-weight: var(--name__weight);
+    font-style: oblique;
 }
 
 .article {
@@ -375,10 +384,10 @@ aside {
 }
 
 .contact {
-    width: 40px;
-    height: 40px;
+    width: var(--contact__width);
+    height: var(--contact__width);
     border-radius: 30%;
-    font-size: 50px;
+    font-size: var(--contact__size);
 }
 
 .contact a {
@@ -389,20 +398,25 @@ aside {
 
 .contact a:hover {
     transform: rotate3d(360deg);
-    -ms-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -webkit-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transition: 3s ease-in-out;
     -moz-transition: 3s ease-in-out;
     -webkit-transition: 3s ease-in-out;
     -o-transition: 3s ease-in-out;
 }
 
+.contact i {
+    font-size: var(--contact__i__size);
+}
+
+
 .footer_container {
     width: 100%;
     justify-content: center;
-    margin: 0px !important; 
+    margin: 0px !important;
 }
 
 .footer_text {
@@ -411,7 +425,7 @@ aside {
 
 footer {
     text-align: center;
-    margin: 280px 0px 0px 0px;
+    margin: 280px -8px -8px;
     background-color: #73777B;
     max-width: var(--max__width);
 }
@@ -438,12 +452,12 @@ footer {
         --font__size: 28px;
     }
 
-    .section_2_container { 
-        --max__width: 1280px;
+    .main {
+        margin-left: 40px;
     }
 
-    .article_container {
-        --article_width: 230px;
+    .section_2_container {
+        --max__width: 1280px;
     }
 
     .section_2_container {
@@ -472,7 +486,7 @@ footer {
         display: block;
         overflow: hidden;
     }
-    
+
     .name {
         --name__size: 104px;
     }
@@ -484,11 +498,11 @@ footer {
     .bxl-linkedin {
         --social__btn__size: 40px;
     }
-    
+
     .bxl-instagram {
         --social__btn__size: 40px;
     }
-    
+
     .bxl-twitter {
         --social__btn__size: 30px;
     }
@@ -507,12 +521,70 @@ footer {
         --left__section_container_2: 600px;
     }
 
+    aside {
+        --max__width: 1100px;
+        justify-content: center;
+    }
+
+    .contact {
+        --contact__width: 68px;
+        --contac__size: 100px;
+    }
+
+    .contact i {
+        --contact__i__size: 80px;
+    }
+
     footer {
         --max__width: 1280px;
     }
 
     .skill_bar {
         left: 55px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        margin-left: 40px;
+    }
+
+    .article_container {
+        --article__width: 580px;
+        left: 25px;
+    }
+
+    .section_container_2 {
+        --left__section_container_2: 750px;
+    }
+
+    .main_ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+        gap: 40px;
+    }
+    
+    aside {
+        --max__width: 2200px;
+        justify-content: center;
+    }
+
+    .contact {
+        --contact__width: 100px;
+    }
+
+    .contact i {
+        --contact__i__size: 80px;
+    }
+
+    .aside_container {
+        margin-left: 20px;
+    }
+
+    footer {
+        --max__width: infinite;
     }
 
 }
